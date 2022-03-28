@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #d3a717, #a53f23);
+  color: white;
+  font-family: "Poppins", sans-serif; /*Pasirenkam srifta, kuri importinom html'e*/
+  min-height: 100vh; /*Kad per visa ekrana butu*/
+}
+
+button {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.7rem;
+  width: 200px;
+  background: chocolate;
+  border-radius: 20px;
+  border-width: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 50px;
+  font-weight: 200;
+}
+
+.first_line,
+.second_line,
+.third_line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#first {
+  background-color: green;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#second {
+  background-color: red;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#third {
+  background-color: rgb(116, 116, 0);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#fourth {
+  background-color: blue;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#fifth {
+  background-color: rgb(163, 105, 29);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#sixth {
+  background-color: rgb(4, 160, 160);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#seventh {
+  background-color: darkolivegreen;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#eighth {
+  background-color: deeppink;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#ninth {
+  background-color: rgb(180, 161, 53);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.choise {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /*Sitie trys reikalingi kad modal per pati viduri ekrano butu*/
+  z-index: 10; /*Kad butu virs visko ir visada pasimatytu*/
+}
+
+.play-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.choise.inactive {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#overlay.active {
+  position: fixed;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /*Sitie 4 reikalingi, kad pilka spalva iki pat saito krastu butu */
+  background-color: rgba(0, 0, 0, 0.7);
+  /*Reikalingas, kad click eventus capturintu, kai yra norim atidaryt modala*/
+}
+#overlay {
+  opacity: 0;
+}
+
+.ending.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /*Sitie trys reikalingi kad modal per pati viduri ekrano butu*/
+  z-index: 10; /*Kad butu virs visko ir visada pasimatytu*/
+  text-align: center;
+}
+.ending {
+  transform: translate(-50%, -50%) scale(0);
+}
